@@ -12,7 +12,7 @@ import java.util.HashMap;
 public class QueryOptions {
     ActionTypePropertyOlx property;
     boolean isUsedProperty;
-    String query;
+    String queryInSearchField;
 
     long priceFrom;
     long priceTo;
@@ -31,6 +31,37 @@ public class QueryOptions {
     boolean withPhoto;
     //page option
     CurrencyType currency;
+
+
+    //only for test
+    public void getQueryOptions(){
+        QueryOptions q = new QueryOptions(
+                ActionTypePropertyOlx.SALE_APARTMENT,
+                true, "",0L,100000L,
+                1,2,0,60,1,12,
+                true, 9,
+                true, CurrencyType.USA
+        );
+
+    }
+
+    public QueryOptions(ActionTypePropertyOlx property, boolean isUsedProperty, String queryInSearchField, long priceFrom, long priceTo, int roomFrom, int roomTo, int livingAreaFrom, int livingAreaTo, int levelFrom, int levelTo, boolean isPrivateBusiness, int districtNumber, boolean withPhoto, CurrencyType currency) {
+        this.property = property;
+        this.isUsedProperty = isUsedProperty;
+        this.queryInSearchField = queryInSearchField;
+        this.priceFrom = priceFrom;
+        this.priceTo = priceTo;
+        this.roomFrom = roomFrom;
+        this.roomTo = roomTo;
+        this.livingAreaFrom = livingAreaFrom;
+        this.livingAreaTo = livingAreaTo;
+        this.levelFrom = levelFrom;
+        this.levelTo = levelTo;
+        this.isPrivateBusiness = isPrivateBusiness;
+        this.districtNumber = districtNumber;
+        this.withPhoto = withPhoto;
+        this.currency = currency;
+    }
 
     class InnerFilter {
         // 1 room property - from - 16 m*m and itc.

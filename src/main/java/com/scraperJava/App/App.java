@@ -9,9 +9,7 @@ import javafx.stage.Stage;
 
 import java.util.concurrent.Future;
 
-/**
- * Hello world!
- */
+
 public class App extends Application {
 
     Future result;

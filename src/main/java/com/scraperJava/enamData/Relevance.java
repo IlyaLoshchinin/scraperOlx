@@ -10,6 +10,7 @@ import java.util.Locale;
  * Created by Ilya Loshchinin on 23.09.2017.
  */
 public enum Relevance {
+    //For Olx.ua
     TODAY(LocalDate.now(ZoneId.of("Europe/Kiev")).format(DateTimeFormatter.ofPattern("dd MMMM yyyy")));
 
 
