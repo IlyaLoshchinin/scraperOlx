@@ -23,8 +23,8 @@ public enum ActionTypePropertyOlx {
     PROPERTY_ABROAD("/nedvizhimost-za-rubezhom/","Недвижимость за рубежом");
 
 
-    String partOfUrl;
-    String humanName;
+    private String partOfUrl;
+    private String humanName;
 
     ActionTypePropertyOlx(String partOfUrl, String humanName) {
         this.partOfUrl = partOfUrl;

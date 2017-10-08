@@ -1,5 +1,6 @@
 package com.scraperJava.App;
 
+import com.scraperJava.enamData.DistrictKiev;
 import com.scraperJava.enamData.Relevance;
 
 import java.util.concurrent.*;
@@ -34,7 +35,7 @@ public class Scraper implements Runnable {
         System.out.println("Start! " + Thread.currentThread().getName() );
 
 
-        System.out.println(Relevance.TODAY);
+        System.out.println(DistrictKiev.DARNITSKIY);
 
 
 
