@@ -36,6 +36,9 @@ public class Scraper implements Runnable {
 
 
         System.out.println(DistrictKiev.DARNITSKIY);
+        System.out.println(Relevance.TODAY);
+        System.out.println(Relevance.YESTERDAY);
+        System.out.println(Relevance.THREEDAYS);
 
 
 
