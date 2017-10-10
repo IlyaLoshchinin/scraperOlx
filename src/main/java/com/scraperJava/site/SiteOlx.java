@@ -16,7 +16,7 @@ public class SiteOlx implements Site {
     }
 
 
-    public void start(){
+    public void parseAdvert(){
 
 
     };

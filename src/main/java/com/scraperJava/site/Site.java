@@ -14,6 +14,8 @@ interface Site {
     boolean isSuit();
     URL nextPage();
 
+    void parseAdvert();
+
     URL getBaseURL();
 
 }

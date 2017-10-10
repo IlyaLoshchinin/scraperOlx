@@ -3,14 +3,13 @@ package com.scraperJava.elements;
 import com.scraperJava.enamData.CurrencyType;
 import com.scraperJava.enamData.ActionTypePropertyOlx;
 import com.scraperJava.enamData.Relevance;
-import com.sun.xml.internal.bind.v2.TODO;
 
 import java.util.HashMap;
 
 /**
  * Created by Ilya Loshchinin on 23.09.2017.
  */
-public class QueryOptions {
+public class QueryOption {
     ActionTypePropertyOlx property;
     boolean isUsedProperty;
     String queryInSearchField;
@@ -39,7 +38,7 @@ public class QueryOptions {
     public void getQueryOptions() {
 
 
-        QueryOptions q = new QueryOptions(
+        QueryOption q = new QueryOption(
                 ActionTypePropertyOlx.SALE_APARTMENT,
                 true, "", 0L, 100000L,
                 1, 2, 0, 60, 1, 12,
@@ -51,11 +50,11 @@ public class QueryOptions {
     }
 
     //TODO delete empty constructor
-    public QueryOptions() {
+    public QueryOption() {
 
     }
 
-    public QueryOptions(ActionTypePropertyOlx property, boolean isUsedProperty, String queryInSearchField, long priceFrom, long priceTo, int roomFrom, int roomTo, int livingAreaFrom, int livingAreaTo, int levelFrom, int levelTo, boolean isPrivateBusiness, int districtNumber, boolean withPhoto, CurrencyType currency) {
+    public QueryOption(ActionTypePropertyOlx property, boolean isUsedProperty, String queryInSearchField, long priceFrom, long priceTo, int roomFrom, int roomTo, int livingAreaFrom, int livingAreaTo, int levelFrom, int levelTo, boolean isPrivateBusiness, int districtNumber, boolean withPhoto, CurrencyType currency) {
         this.property = property;
         this.isUsedProperty = isUsedProperty;
         this.queryInSearchField = queryInSearchField;
