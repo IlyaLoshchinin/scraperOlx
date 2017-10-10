@@ -1,6 +1,8 @@
 package com.scraperJava.elements;
 
 
+import com.scraperJava.enamData.Relevance;
+
 import java.nio.file.Files;
 
 /**
@@ -23,6 +25,8 @@ public class Node {
         this.photo = photo;
         this.address = address;
         this.level = level;
+
+
     }
 
     public long getID() {
