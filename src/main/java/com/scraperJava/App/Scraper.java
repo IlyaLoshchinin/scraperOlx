@@ -3,6 +3,7 @@ package com.scraperJava.App;
 import com.scraperJava.enamData.DistrictKiev;
 import com.scraperJava.enamData.Relevance;
 
+import java.util.ArrayList;
 import java.util.concurrent.*;
 
 /**
@@ -11,8 +12,8 @@ import java.util.concurrent.*;
 public class Scraper implements Runnable {
 
    private final static Scraper instance = new Scraper();
-   private final static ExecutorService es = Executors.newSingleThreadExecutor();
-   private static Future task = null;
+   private final static ExecutorService es = Executors.newSingleThreadExecutor(); //пока в расположении один поток
+   private static ArrayList<Future> tasks = new ArrayList<>(); //можем запускать несколько запросов.
 
     private Scraper() {}
 
@@ -21,7 +22,7 @@ public class Scraper implements Runnable {
     }
 
     static void startScraping(){
-        task = es.submit(Scraper.getInstance());
+         tasks.add(es.submit(Scraper.getInstance()));
     }
 
     static void executorShoutdown(){
