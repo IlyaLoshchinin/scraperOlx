@@ -3,6 +3,7 @@ package com.scraperJava.site;
 import com.scraperJava.elements.Node;
 import com.scraperJava.elements.QueryOption;
 import com.scraperJava.enamData.ActionTypePropertyOlx;
+import org.apache.poi.ss.formula.functions.T;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -14,6 +15,7 @@ import java.lang.annotation.Documented;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.regex.PatternSyntaxException;
@@ -68,13 +70,19 @@ public final class SiteOlx extends Site<Node> implements Parse<QueryOption> {
         }
 
 
+       List<String> links =  getUrlListOfNodes(mainDoc);
 
+        for (String link : links){
+            System.out.println(link);
+        }
 
     }
 
     @Override
-    public ArrayList<URL> getUrlListOfNodes() {
-        return null;
+    public ArrayList<String> getUrlListOfNodes(Document document) {
+        //System.out.println(document.select("#offers_table .wrap table h3 > a").eachAttr("href").size());
+
+        return (ArrayList<String>) document.select("#offers_table .wrap table h3 > a").eachAttr("href");
     }
 
 

@@ -52,8 +52,8 @@ public class QueryOption {
 
     public String getPathConnect(){
         //TODO build String url from queryOptions
-
-        return "";
+            //default
+        return "nedvizhimost/prodazha-kvartir/vtorichnyy-rynok/kiev/?search%5Bdistrict_id%5D=9";
     }
 
 

@@ -1,6 +1,7 @@
 package com.scraperJava.site;
 
 import com.scraperJava.elements.Node;
+import org.jsoup.nodes.Document;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -14,7 +15,7 @@ abstract class  Site<T> {
     String baseURL;
     private Set<T> resultSet = new HashSet<>();
 
-    abstract ArrayList<URL> getUrlListOfNodes();
+    abstract ArrayList getUrlListOfNodes(Document document);
 
     abstract boolean isSuit();
     abstract URL nextPage();
