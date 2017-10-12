@@ -1,7 +1,8 @@
 package com.scraperJava.App;
 
-import com.scraperJava.enamData.DistrictKiev;
-import com.scraperJava.enamData.Relevance;
+import com.scraperJava.elements.QueryOption;
+import com.scraperJava.site.Parse;
+import com.scraperJava.site.SiteOlx;
 
 import java.util.ArrayList;
 import java.util.concurrent.*;
@@ -35,11 +36,13 @@ public class Scraper implements Runnable {
         Thread.currentThread().setName("Scraper "+ Thread.currentThread().getId() );
         System.out.println("Start! " + Thread.currentThread().getName() );
 
+        //get data from GUI
+        QueryOption queryOption = new QueryOption();
+        queryOption.getQueryOptions();
+        //start parsing
+        Parse olx = new SiteOlx("https://www.olx.ua/");
+        olx.start();
 
-        System.out.println(DistrictKiev.DARNITSKIY);
-        System.out.println(Relevance.TODAY);
-        System.out.println(Relevance.YESTERDAY);
-        System.out.println(Relevance.THREEDAYS);
 
 
 

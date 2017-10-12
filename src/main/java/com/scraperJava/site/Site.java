@@ -4,18 +4,15 @@ import java.net.URL;
 import java.util.ArrayList;
 
 /**
- * Created by Ilya Loshchinin on 22.09.2017.
+ * Created by Ilya Loshchinin on 12.10.2017.
  */
-interface Site {
+public abstract class Site {
 
+    abstract ArrayList<URL> getUrlListOfNodes();
+    abstract void addToResultSet();
+    abstract boolean isSuit();
+    abstract URL nextPage();
 
-    ArrayList<URL> getUrlListOfNodes();
-    void addToResultSet();
-    boolean isSuit();
-    URL nextPage();
-
-    void parseAdvert();
-
-    URL getBaseURL();
-
+    abstract void parseAdvert();
+    abstract URL getBaseURL();
 }

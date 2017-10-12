@@ -73,7 +73,7 @@ public class QueryOption {
     }
 
     //TODO setInnerFilter(Relevance searchUntil, HashMap<Integer, Integer> livingAreaFrom, HashMap<Integer, Long[]> priceFromTo)
-    public InnerFilter setInnerFilter() {
+    private InnerFilter setInnerFilter() {
         this.filter = new InnerFilter(Relevance.TODAY);
         return this.filter;
     }
