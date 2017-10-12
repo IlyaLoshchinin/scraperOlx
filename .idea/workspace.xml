@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="26b9c86a-bdc4-463b-8f37-83d9b78baa2e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scraperJava/App/Scraper.java" afterPath="$PROJECT_DIR$/src/main/java/com/scraperJava/App/Scraper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/QueryOption.java" afterPath="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/QueryOption.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scraperJava/site/SiteOlx.java" afterPath="$PROJECT_DIR$/src/main/java/com/scraperJava/site/SiteOlx.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -61,8 +59,8 @@
       <file leaf-file-name="SiteOlx.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/scraperJava/site/SiteOlx.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+            <state relative-caret-position="300">
+              <caret line="69" column="8" lean-forward="false" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#756#757#0" expanded="true" />
@@ -204,9 +202,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/QueryOptions.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scraperJava/site/Parse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scraperJava/site/Site.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/scraperJava/site/SiteOlx.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scraperJava/App/Scraper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/QueryOption.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/scraperJava/site/SiteOlx.java" />
       </list>
     </option>
   </component>
@@ -915,7 +913,7 @@
       <workItem from="1507669289533" duration="3600000" />
       <workItem from="1507738905083" duration="1601000" />
       <workItem from="1507800860880" duration="5612000" />
-      <workItem from="1507829929826" duration="8672000" />
+      <workItem from="1507829929826" duration="8942000" />
     </task>
     <task id="LOCAL-00001" summary="add mock data">
       <created>1507387893231</created>
@@ -1008,11 +1006,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507841867357</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="change return type a method and introduce a new method for build of path">
+      <created>1507842526858</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1507842526858</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60431000" />
+    <option name="totallyTimeSpent" value="60701000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1080,7 +1085,9 @@
     <MESSAGE value="..." />
     <MESSAGE value="change generic to Parse interface" />
     <MESSAGE value="implement a random user agent" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement a random user agent" />
+    <MESSAGE value="change method name" />
+    <MESSAGE value="change return type a method and introduce a new method for build of path" />
+    <option name="LAST_COMMIT_MESSAGE" value="change return type a method and introduce a new method for build of path" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1551,8 +1558,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/scraperJava/site/SiteOlx.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        <state relative-caret-position="300">
+          <caret line="69" column="8" lean-forward="false" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#756#757#0" expanded="true" />

@@ -67,7 +67,7 @@ public final class SiteOlx extends Site<Node> implements Parse<QueryOption> {
             e.printStackTrace();
         }
 
-        System.out.println(userAgent);
+
 
 
     }
