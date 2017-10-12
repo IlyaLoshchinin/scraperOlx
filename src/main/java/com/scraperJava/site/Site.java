@@ -11,7 +11,7 @@ import java.util.Set;
  * Created by Ilya Loshchinin on 12.10.2017.
  */
 abstract class  Site<T> {
-    URL baseURL;
+    String baseURL;
     private Set<T> resultSet = new HashSet<>();
 
     abstract ArrayList<URL> getUrlListOfNodes();
@@ -30,7 +30,7 @@ abstract class  Site<T> {
         else System.out.println("Node is null!");
     }
 
-    URL getBaseURL(){
+    String getBaseURL(){
         return this.baseURL;
      }
 }

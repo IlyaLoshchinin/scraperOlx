@@ -35,7 +35,7 @@ public class QueryOption {
     private InnerFilter filter;
 
     //only for test
-    public void getQueryOptions() {
+    public String getQueryOptions() {
 
 
         QueryOption q = new QueryOption(
@@ -47,6 +47,9 @@ public class QueryOption {
         );
         q.setInnerFilter();
 
+        //TODO build String url from queryOptions
+
+        return "";
     }
 
     //TODO delete empty constructor
