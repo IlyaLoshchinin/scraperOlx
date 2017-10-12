@@ -57,7 +57,7 @@ public final class SiteOlx extends Site<Node> implements Parse<QueryOption> {
         try {
 
             //TODO queryOption.getQueryOptions()
-            mainDoc = Jsoup.connect(getBaseURL() + queryOption.getQueryOptions())
+            mainDoc = Jsoup.connect(getBaseURL() + queryOption.getPathConnect())
                     .userAgent(userAgent)
                     .referrer("http://www.google.com")
                     .timeout(20000)

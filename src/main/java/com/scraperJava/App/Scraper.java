@@ -38,7 +38,7 @@ public class Scraper implements Runnable {
 
         //get data from GUI
         QueryOption queryOption = new QueryOption();
-        queryOption.getQueryOptions();
+        queryOption.getQueryOption();
         //start parsing
         Parse<QueryOption> olx = new SiteOlx("https://www.olx.ua/");
         olx.start(queryOption);

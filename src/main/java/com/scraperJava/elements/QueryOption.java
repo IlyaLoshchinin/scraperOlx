@@ -33,24 +33,29 @@ public class QueryOption {
     CurrencyType currency;
 
     private InnerFilter filter;
+    private QueryOption queryOption;
 
     //only for test
-    public String getQueryOptions() {
+    public QueryOption getQueryOption() {
 
-
-        QueryOption q = new QueryOption(
+        queryOption = new QueryOption(
                 ActionTypePropertyOlx.SALE_APARTMENT,
                 true, "", 0L, 100000L,
                 1, 2, 0, 60, 1, 12,
                 true, 9,
                 true, CurrencyType.USA
         );
-        q.setInnerFilter();
+        queryOption.setInnerFilter();
 
+        return queryOption;
+    }
+
+    public String getPathConnect(){
         //TODO build String url from queryOptions
 
         return "";
     }
+
 
     //TODO delete empty constructor
     public QueryOption() {
