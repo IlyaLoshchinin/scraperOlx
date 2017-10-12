@@ -14,7 +14,7 @@ public class Scraper implements Runnable {
 
    private final static Scraper instance = new Scraper();
    private final static ExecutorService es = Executors.newSingleThreadExecutor(); //пока в расположении один поток
-   private static ArrayList<Future> tasks = new ArrayList<>(); //можем запускать несколько запросов.
+   private static ArrayList<Future> tasks = new ArrayList<>(); //можем запускать несколько запросов
 
     private Scraper() {}
 
@@ -41,9 +41,8 @@ public class Scraper implements Runnable {
         queryOption.getQueryOptions();
         //start parsing
         Parse olx = new SiteOlx("https://www.olx.ua/");
-        olx.start(); //save data in Set
-        //
-        //export data to Excel
+        olx.start();
+        // get and export data to Excel
 
 
 
