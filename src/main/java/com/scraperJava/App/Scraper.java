@@ -41,8 +41,9 @@ public class Scraper implements Runnable {
         queryOption.getQueryOptions();
         //start parsing
         Parse olx = new SiteOlx("https://www.olx.ua/");
-        olx.start();
-
+        olx.start(); //save data in Set
+        //
+        //export data to Excel
 
 
 

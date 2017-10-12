@@ -1,5 +1,7 @@
 package com.scraperJava.site;
 
+import com.scraperJava.elements.Node;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -7,9 +9,8 @@ import java.util.ArrayList;
 /**
  * Created by Ilya Loshchinin on 22.09.2017.
  */
-public final class SiteOlx extends Site implements Parse {
+public final class SiteOlx extends Site<Node> implements Parse {
 
-    private URL baseURL = null;
 
 
     public SiteOlx(String baseURL) {
@@ -35,10 +36,7 @@ public final class SiteOlx extends Site implements Parse {
         return null;
     }
 
-    @Override
-    public void addToResultSet() {
 
-    }
 
     @Override
     public boolean isSuit() {
@@ -49,7 +47,6 @@ public final class SiteOlx extends Site implements Parse {
     public URL nextPage() {
         return null;
     }
-
 
 
     @Override
