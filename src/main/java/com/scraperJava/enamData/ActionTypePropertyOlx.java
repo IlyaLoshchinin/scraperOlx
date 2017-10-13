@@ -9,12 +9,13 @@ public enum ActionTypePropertyOlx {
     //Subcategory
     SALE_APARTMENT("/prodazha-kvartir/","Продажа квартир"),
     RENT_APARTMENT("/arenda-kvartir/","Аренда квартир"),
-    SALE_HOUSE("/prodazha-zemli/","Продажа земли"),
+    SALE_HOUSE("/prodazha-domov/","Продажа домов"),
+    SALE_LAND("/prodazha-zemli/","Продажа земли"),
     SALE_PREMISES("/prodazha-pomescheniy/","Продажа помещений");
 
 
     /*RENT_HOUSE("/arenda-domov/","Аренда домов"),
-    RENT_LEASE("/arenda-zemli/","Аренда земли"),
+    RENT_LAND("/arenda-zemli/","Аренда земли"),
     RENT_GARAGE("/arenda-garazhey-stoyanok/","Аренда гаражей"),
     RENT_PREMISE("/arenda-pomescheniy/","Аренда помещений"),
     SALE_ROOM("/prodazha-komnat/","Продажа комнат"),
