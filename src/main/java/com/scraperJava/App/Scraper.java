@@ -40,7 +40,7 @@ public class Scraper implements Runnable {
         QueryOption queryOption = new QueryOption();
         queryOption.getQueryOption();
         //start parsing
-        Parse<QueryOption> olx = new SiteOlx("https://www.olx.ua");
+        Parse<QueryOption> olx = new SiteOlx("https://www.olx.ua/");
         olx.start(queryOption);
         // get and export data to Excel
 
