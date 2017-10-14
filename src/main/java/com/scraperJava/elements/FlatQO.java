@@ -2,6 +2,7 @@ package com.scraperJava.elements;
 
 import com.scraperJava.enamData.CurrencyType;
 import com.scraperJava.enamData.ActionTypePropertyOlx;
+import com.scraperJava.enamData.DistrictKiev;
 import com.scraperJava.enamData.Relevance;
 
 import java.util.HashMap;
@@ -25,10 +26,10 @@ public class FlatQO extends QueryOption implements InnerFilter {
     public void getDataFields() {
 
         init(
-                ActionTypePropertyOlx.SALE_APARTMENT,
-                true, "", 0L, 100000L,
+                ActionTypePropertyOlx.SALE_APARTMENT,ActionTypePropertyOlx.SALE_APARTMENT,
+                 "", 0L, 100000L,
                 1, 2, 0, 60, 1, 12,
-                true, 9,
+                InterestType.PRIVATE, DistrictKiev.OBOLONSKY,
                 true, CurrencyType.USA
         );
     }
@@ -38,9 +39,9 @@ public class FlatQO extends QueryOption implements InnerFilter {
     public FlatQO() {}
 
 
-    void init(ActionTypePropertyOlx property, boolean isUsedProperty, String queryInSearchField, long priceFrom, long priceTo, int roomFrom, int roomTo, int livingAreaFrom, int livingAreaTo, int levelFrom, int levelTo, boolean isPrivateBusiness, int districtNumber, boolean withPhoto, CurrencyType currency) {
+    void init(ActionTypePropertyOlx property, ActionTypePropertyOlx propertySubcategory, String queryInSearchField, long priceFrom, long priceTo, int roomFrom, int roomTo, int livingAreaFrom, int livingAreaTo, int levelFrom, int levelTo, InterestType interestType, DistrictKiev district, boolean withPhoto, CurrencyType currency) {
         this.property = property;
-        this.isUsedProperty = isUsedProperty;
+        this.propertySubcategory = propertySubcategory;
         this.queryInSearchField = queryInSearchField;
         this.priceFrom = priceFrom;
         this.priceTo = priceTo;
@@ -50,8 +51,8 @@ public class FlatQO extends QueryOption implements InnerFilter {
         this.livingAreaTo = livingAreaTo;
         this.levelFrom = levelFrom;
         this.levelTo = levelTo;
-        this.isPrivateBusiness = isPrivateBusiness;
-        this.districtNumber = districtNumber;
+        this.interestType = interestType;
+        this.district = district;
         this.withPhoto = withPhoto;
         this.currency = currency;
     }

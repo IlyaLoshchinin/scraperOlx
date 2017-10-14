@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26b9c86a-bdc4-463b-8f37-83d9b78baa2e" name="Default" comment="add new option">
+    <list default="true" id="26b9c86a-bdc4-463b-8f37-83d9b78baa2e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/FlatQO.java" afterPath="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/FlatQO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/QueryOption.java" afterPath="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/QueryOption.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,7 +24,7 @@
       <file leaf-file-name="Scraper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/scraperJava/App/Scraper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
+            <state relative-caret-position="511">
               <caret line="44" column="14" lean-forward="true" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
               <folding />
             </state>
@@ -58,25 +59,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QueryOption.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="QueryOption.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/scraperJava/elements/QueryOption.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            <state relative-caret-position="136">
+              <caret line="17" column="45" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2218#2219#0" expanded="true" />
-                <element signature="e#2281#2282#0" expanded="true" />
+                <element signature="e#2267#2268#0" expanded="true" />
+                <element signature="e#2330#2331#0" expanded="true" />
+                <element signature="e#2563#2564#0" expanded="true" />
+                <element signature="e#2603#2604#0" expanded="true" />
+                <element signature="e#2657#2658#0" expanded="true" />
+                <element signature="e#2692#2693#0" expanded="true" />
+                <element signature="e#2734#2735#0" expanded="true" />
+                <element signature="e#2804#2805#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FlatQO.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FlatQO.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/scraperJava/elements/FlatQO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="812">
+              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -145,10 +152,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/InnerOption.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/InnerFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scraperJava/site/SiteOlx.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/FlatQO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scraperJava/App/Scraper.java" />
         <option value="$PROJECT_DIR$/olx.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/QueryOption.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/FlatQO.java" />
       </list>
     </option>
   </component>
@@ -859,7 +866,7 @@
       <workItem from="1507800860880" duration="5612000" />
       <workItem from="1507829929826" duration="10823000" />
       <workItem from="1507913279860" duration="7723000" />
-      <workItem from="1507971388813" duration="9754000" />
+      <workItem from="1507971388813" duration="11334000" />
     </task>
     <task id="LOCAL-00001" summary="add mock data">
       <created>1507387893231</created>
@@ -1022,11 +1029,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507986110377</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="change option order">
+      <created>1507995372626</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1507995372626</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80059000" />
+    <option name="totallyTimeSpent" value="81639000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1102,7 +1116,8 @@
     <MESSAGE value="add description for subcategory" />
     <MESSAGE value="change structure of project" />
     <MESSAGE value="add new option" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new option" />
+    <MESSAGE value="change option order" />
+    <option name="LAST_COMMIT_MESSAGE" value="change option order" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1428,14 +1443,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scraperJava/App/Scraper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="44" column="14" lean-forward="true" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/scraperJava/site/Parse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -1460,28 +1467,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scraperJava/elements/FlatQO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scraperJava/enamData/ActionTypePropertyOlx.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
-          <caret line="34" column="17" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3399#3400#0" expanded="true" />
-            <element signature="e#3431#3432#0" expanded="true" />
-            <element signature="e#3481#3482#0" expanded="true" />
-            <element signature="e#3526#3527#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/scraperJava/site/SiteOlx.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-782">
@@ -1500,15 +1485,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scraperJava/elements/QueryOption.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scraperJava/enamData/ActionTypePropertyOlx.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        <state relative-caret-position="732">
+          <caret line="34" column="17" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2218#2219#0" expanded="true" />
-            <element signature="e#2281#2282#0" expanded="true" />
+            <element signature="e#3399#3400#0" expanded="true" />
+            <element signature="e#3431#3432#0" expanded="true" />
+            <element signature="e#3481#3482#0" expanded="true" />
+            <element signature="e#3526#3527#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scraperJava/App/Scraper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="44" column="14" lean-forward="true" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scraperJava/elements/QueryOption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="17" column="45" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2267#2268#0" expanded="true" />
+            <element signature="e#2330#2331#0" expanded="true" />
+            <element signature="e#2563#2564#0" expanded="true" />
+            <element signature="e#2603#2604#0" expanded="true" />
+            <element signature="e#2657#2658#0" expanded="true" />
+            <element signature="e#2692#2693#0" expanded="true" />
+            <element signature="e#2734#2735#0" expanded="true" />
+            <element signature="e#2804#2805#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scraperJava/elements/FlatQO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="812">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

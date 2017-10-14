@@ -2,6 +2,7 @@ package com.scraperJava.elements;
 
 import com.scraperJava.enamData.ActionTypePropertyOlx;
 import com.scraperJava.enamData.CurrencyType;
+import com.scraperJava.enamData.DistrictKiev;
 import com.scraperJava.enamData.Relevance;
 
 import java.util.HashMap;
@@ -34,8 +35,8 @@ public abstract class QueryOption {
     int levelFrom; //search%5Bfilter_float_floor%3Afrom%5D=1 {2*N} - этаж
     int levelTo; //search%5Bfilter_float_floor%3Ato%5D=1 {2*N}
 
-    boolean isPrivateBusiness; //search%5Bprivate_business%5D=private - {private,business}
-    int districtNumber; //&search%5Bdistrict_id%5D=9 - районы
+    InterestType interestType; //search%5Bprivate_business%5D=private - {private,business}
+    DistrictKiev district; //&search%5Bdistrict_id%5D=9 - районы
     boolean withPhoto; //search%5Bphotos%5D=1 - c фото или none;
 
     // SELL HOUSE -> (priceFrom|To) + below
@@ -65,4 +66,21 @@ public abstract class QueryOption {
         //extract data fields form the GUI
     }
 
+     protected enum InterestType{
+        PRIVATE("private"),BUSINESS("business"),ALL("");
+
+        String type;
+        InterestType(String type) {
+            this.type = type;
+        }
+
+        @Override
+        public String toString() {
+            return type;
+        }
+
+        public String getTypeUrlPart() {
+            return "&search%5Bprivate_business%5D=" + type;
+        }
+    }
 }
