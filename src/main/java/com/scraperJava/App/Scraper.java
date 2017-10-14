@@ -1,5 +1,6 @@
 package com.scraperJava.App;
 
+import com.scraperJava.elements.FlatQO;
 import com.scraperJava.elements.QueryOption;
 import com.scraperJava.site.Parse;
 import com.scraperJava.site.SiteOlx;
@@ -37,11 +38,11 @@ public class Scraper implements Runnable {
         System.out.println("Start! " + Thread.currentThread().getName() );
 
         //get data from GUI
-        QueryOption queryOption = new QueryOption();
-        queryOption.getQueryOption();
+        QueryOption queryOption = new FlatQO();
+        queryOption.getDataFromForm();
         //start parsing
-        Parse<QueryOption> olx = new SiteOlx("https://www.olx.ua/");
-        olx.start(queryOption);
+        Parse<FlatQO> olx = new SiteOlx("https://www.olx.ua/");
+        olx.start(flatQO);
         // get and export data to Excel
 
 

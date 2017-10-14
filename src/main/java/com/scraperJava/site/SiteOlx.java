@@ -1,22 +1,16 @@
 package com.scraperJava.site;
 
+import com.scraperJava.elements.FlatQO;
 import com.scraperJava.elements.Node;
 import com.scraperJava.elements.QueryOption;
-import com.scraperJava.enamData.ActionTypePropertyOlx;
-import org.apache.poi.ss.formula.functions.T;
-import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
-import javax.print.Doc;
 import java.io.IOException;
-import java.lang.annotation.Documented;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.regex.PatternSyntaxException;
 
@@ -58,7 +52,7 @@ public final class SiteOlx extends Site<Node> implements Parse<QueryOption> {
         }
         try {
 
-            //TODO queryOption.getQueryOptions()
+            //TODO flatQO.getQueryOptions()
             mainDoc = Jsoup.connect(getBaseURL() + queryOption.getPathConnect())
                     .userAgent(userAgent)
                     .referrer("http://www.google.com")

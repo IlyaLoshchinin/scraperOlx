@@ -80,8 +80,8 @@ public enum ActionTypePropertyOlx {
         return partOfUrl;
     }
 
-    public HashMap<String, String> getMapOfCategory() {
-        return mapOfCategory;
+    public String getCategoryByKey(String key) {
+        return mapOfCategory.get(key);
     }
 
     public String getName() {
