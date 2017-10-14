@@ -10,33 +10,50 @@ import java.util.HashMap;
  * Created by Ilya Loshchinin on 14.10.2017.
  */
 public abstract class QueryOption {
+    //order is NOT important in request url
 
-    ActionTypePropertyOlx property;
+    //GENERAL
+    ActionTypePropertyOlx property; //sell_apartment itc.
+    ActionTypePropertyOlx propertySubcategory; //child of property itc.
+    //GENERAL
 
-    boolean isUsedProperty;
-    String queryInSearchField;
+    String city = "Kiev/"; //default = Kiev
+    String queryInSearchField; //q-'value'/
+    //?
+    //SELL|RENT FLAT
+    long priceFrom; //search%5Bfilter_float_price%3Afrom%5D=1000 {13*N}
+    long priceTo;   //search%5Bfilter_float_price%3Ato%5D=1000   {13*N}
 
-    long priceFrom;
-    long priceTo;
+    int roomFrom; //search%5Bfilter_float_number_of_rooms%3Afrom%5D=1 {3*N}
+    int roomTo;     //search%5Bfilter_float_number_of_rooms%3Ato%5D=1   {3*N}
 
-    int roomFrom;
-    int roomTo;
+    int livingAreaFrom; //search%5Bfilter_float_total_living_area%3Afrom%5D=20
+    int livingAreaTo; //search%5Bfilter_float_total_living_area%3Ato%5D=20
 
-    int livingAreaFrom;
-    int livingAreaTo;
+    int levelFrom; //search%5Bfilter_float_floor%3Afrom%5D=1 {2*N} - этаж
+    int levelTo; //search%5Bfilter_float_floor%3Ato%5D=1 {2*N}
 
-    int levelFrom;
-    int levelTo;
+    boolean isPrivateBusiness; //search%5Bprivate_business%5D=private - {private,business}
+    int districtNumber; //&search%5Bdistrict_id%5D=9 - районы
+    boolean withPhoto; //search%5Bphotos%5D=1 - c фото или none;
 
-    boolean isPrivateBusiness;
-    int districtNumber;
-    boolean withPhoto;
-    //page option
-    CurrencyType currency;
+    // SELL HOUSE -> (priceFrom|To) + below
+     long floatHouseAreaFrom; //search%5Bfilter_float_house_area%3Afrom%5D=150 {6*N}
+     long floatHouseAreaTo; //search%5Bfilter_float_house_area%3Ato%5D=175 {6*N}
 
+
+
+     //page=2 (1 - none)
+
+    CurrencyType currency; //currency=USD - {none (UA),USA,EUR}
+
+   //OTHER
     Relevance searchUntil;
 
-    abstract public String getPathConnect();
+     public String getPathConnect(){
+        return ActionTypePropertyOlx.MAIN_CATEGORY + "";
+    }
+
     public void getDataFields(){
         //extract data fields form the GUI
     }
