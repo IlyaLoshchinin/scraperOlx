@@ -9,6 +9,6 @@ import java.lang.annotation.*;
 @Target(ElementType.FIELD)
 @Inherited
 @Retention(RetentionPolicy.RUNTIME)
-public @interface BindWithString {
+public @interface Bind {
        String value();
 }

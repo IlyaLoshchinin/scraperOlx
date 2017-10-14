@@ -38,7 +38,7 @@ public final class SiteOlx extends Site<Node> implements Parse<QueryOption> {
 
         //Get USER AGENT from site (common user agents (up to date) by https://techblog.willshouse.com)
         try {
-            userAgentLines = Jsoup.parse(new URL("https://techblog.willshouse.com/2012/01/03/most-common-user-agents"),10000).select("textarea.get-the-list").first();
+            userAgentLines = Jsoup.parse(new URL("https://techblog.willshouse.com/2012/01/03/most-common-user-agents"),30000).select("textarea.get-the-list").first();
 
            int randomRow = ThreadLocalRandom.current().nextInt(10); // TOP 10
             try {
@@ -50,10 +50,14 @@ public final class SiteOlx extends Site<Node> implements Parse<QueryOption> {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        try {
+        queryOption.getPathConnect();
+       /* try {
+
+
+
 
             //TODO flatQO.getQueryOptions()
-            mainDoc = Jsoup.connect(getBaseURL() + queryOption.getPathConnect())
+            mainDoc = Jsoup.connect(getBaseURL())
                     .userAgent(userAgent)
                     .referrer("http://www.google.com")
                     .timeout(20000)
@@ -62,7 +66,7 @@ public final class SiteOlx extends Site<Node> implements Parse<QueryOption> {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+*/
 
        List<String> links =  getUrlListOfNodes(mainDoc);
 

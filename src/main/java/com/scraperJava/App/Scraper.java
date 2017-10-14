@@ -46,7 +46,6 @@ public class Scraper implements Runnable {
         // get and export data to Excel
 
 
-
         System.out.println("End! " + Thread.currentThread().getName() );
     }
 }

@@ -15,12 +15,12 @@ public class FlatQO extends QueryOption implements InnerFilter {
 
 
 
-    @Override
-    public String getPathConnect(){
-        //TODO build String url from queryOptions
-            //default
-        return "/nedvizhimost/prodazha-kvartir/vtorichnyy-rynok/kiev/?search%5Bdistrict_id%5D=9";
-    }
+//    @Override
+//    public String getPathConnect(){
+//        //TODO build String url from queryOptions
+//            //default
+//        return "/nedvizhimost/prodazha-kvartir/vtorichnyy-rynok/kiev/?search%5Bdistrict_id%5D=9";
+//    }
 
     @Override
     public void getDataFields() {
