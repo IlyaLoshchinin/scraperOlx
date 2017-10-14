@@ -41,7 +41,13 @@ public abstract class QueryOption {
      long floatHouseAreaFrom; //search%5Bfilter_float_house_area%3Afrom%5D=150 {6*N}
      long floatHouseAreaTo; //search%5Bfilter_float_house_area%3Ato%5D=175 {6*N}
 
+    //SALE LAND -> (priceFrom|To) + below
+     long floatLandAreaFrom;  //search%5Bfilter_float_land_area%3Afrom%5D=6& {6*N}
+     long floatLandAreaTo;  //search%5Bfilter_float_land_area%3Ato%5D=20& {6*N}
 
+    //SALE PREMISES -> (priceFrom|To) + below
+    long floatAreaFrom; //search%5Bfilter_float_area%3Afrom%5D=2000
+    long floatAreaTo;  //search%5Bfilter_float_area%3Ato%5D=2500
 
      //page=2 (1 - none)
 
