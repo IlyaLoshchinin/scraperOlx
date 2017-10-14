@@ -15,15 +15,16 @@ public abstract class QueryOption {
     //GENERAL
     ActionTypePropertyOlx property; //sell_apartment itc.
     ActionTypePropertyOlx propertySubcategory; //child of property itc.
-    //GENERAL
 
     String city = "Kiev/"; //default = Kiev
     String queryInSearchField; //q-'value'/
     //?
-    //SELL|RENT FLAT
     long priceFrom; //search%5Bfilter_float_price%3Afrom%5D=1000 {13*N}
     long priceTo;   //search%5Bfilter_float_price%3Ato%5D=1000   {13*N}
+    //GENERAL
 
+
+    //SELL|RENT FLAT -> (priceFrom|To) + below
     int roomFrom; //search%5Bfilter_float_number_of_rooms%3Afrom%5D=1 {3*N}
     int roomTo;     //search%5Bfilter_float_number_of_rooms%3Ato%5D=1   {3*N}
 
