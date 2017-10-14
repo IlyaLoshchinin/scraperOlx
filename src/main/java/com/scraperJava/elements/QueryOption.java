@@ -37,7 +37,7 @@ public abstract class QueryOption {
     Relevance searchUntil;
 
     abstract public String getPathConnect();
-    public void getDataFromForm(){
+    public void getDataFields(){
         //extract data fields form the GUI
     }
 

@@ -39,10 +39,10 @@ public class Scraper implements Runnable {
 
         //get data from GUI
         QueryOption queryOption = new FlatQO();
-        queryOption.getDataFromForm();
+        queryOption.getDataFields();
         //start parsing
-        Parse<FlatQO> olx = new SiteOlx("https://www.olx.ua/");
-        olx.start(flatQO);
+        Parse<QueryOption> olx = new SiteOlx("https://www.olx.ua/");
+        olx.start(queryOption);
         // get and export data to Excel
 
 

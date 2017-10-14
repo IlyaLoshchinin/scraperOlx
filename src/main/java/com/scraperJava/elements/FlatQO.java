@@ -22,7 +22,7 @@ public class FlatQO extends QueryOption implements InnerFilter {
     }
 
     @Override
-    public void getDataFromForm() {
+    public void getDataFields() {
 
         init(
                 ActionTypePropertyOlx.SALE_APARTMENT,
