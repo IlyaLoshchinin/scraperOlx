@@ -24,49 +24,61 @@ public abstract class QueryOption {
     @Bind("q-'value'/")
     String queryInSearchField; //q-'value'/
 
-
     //?
     @Bind("search%5Bfilter_float_price%3Afrom%5D='value'/")
     long priceFrom; //search%5Bfilter_float_price%3Afrom%5D=1000 {13*N}
-
     @Bind("search%5Bfilter_float_price%3Ato%5D='value'/")
     long priceTo;   //search%5Bfilter_float_price%3Ato%5D=1000   {13*N}
     //GENERAL
 
 
     //SELL|RENT FLAT -> (priceFrom|To) + below
+    @Bind("search%5Bfilter_float_number_of_rooms%3Afrom%5D=")
     int roomFrom; //search%5Bfilter_float_number_of_rooms%3Afrom%5D=1 {3*N}
+    @Bind("search%5Bfilter_float_number_of_rooms%3Ato%5D=")
     int roomTo;     //search%5Bfilter_float_number_of_rooms%3Ato%5D=1   {3*N}
 
+    @Bind("search%5Bfilter_float_total_living_area%3Afrom%5D=")
     int livingAreaFrom; //search%5Bfilter_float_total_living_area%3Afrom%5D=20
+    @Bind("search%5Bfilter_float_total_living_area%3Ato%5D=")
     int livingAreaTo; //search%5Bfilter_float_total_living_area%3Ato%5D=20
 
+    @Bind("search%5Bfilter_float_floor%3Afrom%5D=")
     int levelFrom; //search%5Bfilter_float_floor%3Afrom%5D=1 {2*N} - этаж
+    @Bind("search%5Bfilter_float_floor%3Ato%5D=")
     int levelTo; //search%5Bfilter_float_floor%3Ato%5D=1 {2*N}
 
+    @Bind("search%5Bprivate_business%5D=")
     InterestType interestType; //search%5Bprivate_business%5D=private - {private,business}
-    DistrictKiev district; //&search%5Bdistrict_id%5D=9 - районы
+    @Bind("search%5Bdistrict_id%5D=")
+    DistrictKiev district; //search%5Bdistrict_id%5D=9 - районы
+    @Bind("search%5Bphotos%5D=")
     boolean withPhoto; //search%5Bphotos%5D=1 - c фото или none;
 
     // SELL HOUSE -> (priceFrom|To) + below
+    @Bind("search%5Bfilter_float_house_area%3Afrom%5D=")
     long floatHouseAreaFrom; //search%5Bfilter_float_house_area%3Afrom%5D=150 {6*N}
+    @Bind("search%5Bfilter_float_house_area%3Ato%5D=")
     long floatHouseAreaTo; //search%5Bfilter_float_house_area%3Ato%5D=175 {6*N}
 
     //SALE LAND -> (priceFrom|To) + below
-    long floatLandAreaFrom;  //search%5Bfilter_float_land_area%3Afrom%5D=6& {6*N}
-    long floatLandAreaTo;  //search%5Bfilter_float_land_area%3Ato%5D=20& {6*N}
+    @Bind("search%5Bfilter_float_land_area%3Afrom%5D=")
+    long floatLandAreaFrom;  //search%5Bfilter_float_land_area%3Afrom%5D=6 {6*N}
+    @Bind("search%5Bfilter_float_land_area%3Ato%5D=")
+    long floatLandAreaTo;  //search%5Bfilter_float_land_area%3Ato%5D=20 {6*N}
 
     //SALE PREMISES -> (priceFrom|To) + below
+    @Bind("search%5Bfilter_float_area%3Afrom%5D=")
     long floatAreaFrom; //search%5Bfilter_float_area%3Afrom%5D=2000
+    @Bind("search%5Bfilter_float_area%3Ato%5D=")
     long floatAreaTo;  //search%5Bfilter_float_area%3Ato%5D=2500
 
     //page=2 (1 - none)
-
+    @Bind("currency=")
     CurrencyType currency; //currency=USD - {none (UA),USA,EUR}
 
     //OTHER
     Relevance searchUntil;
-
 
 
     public String getPathConnect() {
@@ -90,7 +102,7 @@ public abstract class QueryOption {
             if (field == null){continue;}
             Bind annotation = field.getAnnotation(Bind.class);
             if(annotation != null) {
-                Bind ann = (Bind) annotation;
+                Bind ann = annotation;
                 System.out.println(field.getName() + " value: " + ann.value());
             }
         }

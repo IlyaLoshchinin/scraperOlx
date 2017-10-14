@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26b9c86a-bdc4-463b-8f37-83d9b78baa2e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scraperJava/App/Scraper.java" afterPath="$PROJECT_DIR$/src/main/java/com/scraperJava/App/Scraper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/FlatQO.java" afterPath="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/FlatQO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/QueryOption.java" afterPath="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/QueryOption.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scraperJava/site/SiteOlx.java" afterPath="$PROJECT_DIR$/src/main/java/com/scraperJava/site/SiteOlx.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/BindWithString.java" afterPath="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/Bind.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -78,16 +73,16 @@
       <file leaf-file-name="QueryOption.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/scraperJava/elements/QueryOption.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="500">
+              <caret line="104" column="27" lean-forward="false" selection-start-line="104" selection-start-column="27" selection-end-line="104" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3729#3730#0" expanded="true" />
-                <element signature="e#3769#3770#0" expanded="true" />
-                <element signature="e#3823#3824#0" expanded="true" />
-                <element signature="e#3858#3859#0" expanded="true" />
-                <element signature="e#3900#3901#0" expanded="true" />
-                <element signature="e#3970#3971#0" expanded="true" />
+                <element signature="e#4524#4525#0" expanded="true" />
+                <element signature="e#4564#4565#0" expanded="true" />
+                <element signature="e#4618#4619#0" expanded="true" />
+                <element signature="e#4653#4654#0" expanded="true" />
+                <element signature="e#4695#4696#0" expanded="true" />
+                <element signature="e#4765#4766#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -211,9 +206,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/FlatQO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scraperJava/site/SiteOlx.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/BindWithString.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/QueryOption.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scraperJava/App/Scraper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/Bind.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/scraperJava/elements/QueryOption.java" />
       </list>
     </option>
   </component>
@@ -924,7 +919,7 @@
       <workItem from="1507800860880" duration="5612000" />
       <workItem from="1507829929826" duration="10823000" />
       <workItem from="1507913279860" duration="7723000" />
-      <workItem from="1507971388813" duration="22056000" />
+      <workItem from="1507971388813" duration="22421000" />
     </task>
     <task id="LOCAL-00001" summary="add mock data">
       <created>1507387893231</created>
@@ -1108,11 +1103,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508009997440</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="implement to  bind field with part of url">
+      <created>1508010061767</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1508010061767</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92361000" />
+    <option name="totallyTimeSpent" value="92726000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1593,16 +1595,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/scraperJava/elements/QueryOption.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="500">
+          <caret line="104" column="27" lean-forward="false" selection-start-line="104" selection-start-column="27" selection-end-line="104" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3729#3730#0" expanded="true" />
-            <element signature="e#3769#3770#0" expanded="true" />
-            <element signature="e#3823#3824#0" expanded="true" />
-            <element signature="e#3858#3859#0" expanded="true" />
-            <element signature="e#3900#3901#0" expanded="true" />
-            <element signature="e#3970#3971#0" expanded="true" />
+            <element signature="e#4524#4525#0" expanded="true" />
+            <element signature="e#4564#4565#0" expanded="true" />
+            <element signature="e#4618#4619#0" expanded="true" />
+            <element signature="e#4653#4654#0" expanded="true" />
+            <element signature="e#4695#4696#0" expanded="true" />
+            <element signature="e#4765#4766#0" expanded="true" />
           </folding>
         </state>
       </provider>
