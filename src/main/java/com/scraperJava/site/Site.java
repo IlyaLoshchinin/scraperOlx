@@ -11,27 +11,32 @@ import java.util.Set;
 /**
  * Created by Ilya Loshchinin on 12.10.2017.
  */
-abstract class  Site<T> {
-    String baseURL;
-    private Set<T> resultSet = new HashSet<>();
+abstract class Site<T> {
 
-    abstract ArrayList getUrlListOfNodes(Document document);
+  String baseURL;
+  private Set<T> resultSet = new HashSet<>();
 
-    abstract boolean isSuit();
-    abstract URL nextPage();
-    abstract void parseAdvert();
+  abstract ArrayList getUrlListOfNodes(Document document);
 
-    Set<T> getResultSet() {
-        return resultSet;
+  abstract boolean isSuit();
+
+  abstract URL nextPage();
+
+  abstract void parseAdvert();
+
+  Set<T> getResultSet() {
+    return resultSet;
+  }
+
+  void addToResultSet(T node) {
+    if (node != null) {
+      resultSet.add(node);
+    } else {
+      System.out.println("Node is null!");
     }
+  }
 
-    void addToResultSet(T node) {
-        if(node != null)
-            resultSet.add(node);
-        else System.out.println("Node is null!");
-    }
-
-    String getBaseURL(){
-        return this.baseURL;
-     }
+  String getBaseURL() {
+    return this.baseURL;
+  }
 }

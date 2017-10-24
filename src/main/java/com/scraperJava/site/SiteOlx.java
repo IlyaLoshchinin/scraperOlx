@@ -20,37 +20,39 @@ import java.util.regex.PatternSyntaxException;
 public final class SiteOlx extends Site<Node> implements Parse<QueryOption> {
 
 
-    public SiteOlx(String baseURL) {
-            this.baseURL = baseURL;
+  public SiteOlx(String baseURL) {
+    this.baseURL = baseURL;
+  }
+
+  @Override
+  public void parseAdvert() {
+
+  }
+
+
+  @Override
+  public void start(QueryOption queryOption) {
+    Document mainDoc = null;
+    Element userAgentLines;
+    String userAgent = null;
+
+    //Get USER AGENT from site (common user agents (up to date) by https://techblog.willshouse.com)
+    try {
+      userAgentLines = Jsoup
+          .parse(new URL("https://techblog.willshouse.com/2012/01/03/most-common-user-agents"),
+              30000).select("textarea.get-the-list").first();
+
+      int randomRow = ThreadLocalRandom.current().nextInt(10); // TOP 10
+      try {
+        userAgent = userAgentLines.text().split("\\n")[randomRow];
+      } catch (PatternSyntaxException | ArrayIndexOutOfBoundsException e) {
+        //default
+        userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36";
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
     }
-
-    @Override
-    public void parseAdvert(){
-
-    }
-
-
-    @Override
-    public void start(QueryOption queryOption) {
-        Document mainDoc = null;
-        Element userAgentLines;
-        String userAgent = null;
-
-        //Get USER AGENT from site (common user agents (up to date) by https://techblog.willshouse.com)
-        try {
-            userAgentLines = Jsoup.parse(new URL("https://techblog.willshouse.com/2012/01/03/most-common-user-agents"),30000).select("textarea.get-the-list").first();
-
-           int randomRow = ThreadLocalRandom.current().nextInt(10); // TOP 10
-            try {
-                userAgent = userAgentLines.text().split("\\n")[randomRow];
-            }catch (PatternSyntaxException | ArrayIndexOutOfBoundsException e){
-                //default
-                userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36";
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        queryOption.getPathConnect();
+    queryOption.getPathConnect();
        /* try {
 
 
@@ -68,35 +70,31 @@ public final class SiteOlx extends Site<Node> implements Parse<QueryOption> {
         }
 */
 
-       List<String> links =  getUrlListOfNodes(mainDoc);
+    List<String> links = getUrlListOfNodes(mainDoc);
 
-        for (String link : links){
-            System.out.println(link);
-        }
-
+    for (String link : links) {
+      System.out.println(link);
     }
 
-    @Override
-    public ArrayList<String> getUrlListOfNodes(Document document) {
-        //System.out.println(document.select("#offers_table .wrap table h3 > a").eachAttr("href").size());
+  }
 
-        return (ArrayList<String>) document.select("#offers_table .wrap table h3 > a").eachAttr("href");
-    }
+  @Override
+  public ArrayList<String> getUrlListOfNodes(Document document) {
+    //System.out.println(document.select("#offers_table .wrap table h3 > a").eachAttr("href").size());
 
-
-
-    @Override
-    public boolean isSuit() {
-        return false;
-    }
-
-    @Override
-    public URL nextPage() {
-        return null;
-    }
+    return (ArrayList<String>) document.select("#offers_table .wrap table h3 > a").eachAttr("href");
+  }
 
 
+  @Override
+  public boolean isSuit() {
+    return false;
+  }
 
+  @Override
+  public URL nextPage() {
+    return null;
+  }
 
 
 }

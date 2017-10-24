@@ -13,39 +13,41 @@ import java.util.concurrent.*;
  */
 public class Scraper implements Runnable {
 
-   private final static Scraper instance = new Scraper();
-   private final static ExecutorService es = Executors.newSingleThreadExecutor(); //пока в расположении один поток
-   private static ArrayList<Future> tasks = new ArrayList<>(); //можем запускать несколько запросов
+  private final static Scraper instance = new Scraper();
+  private final static ExecutorService es = Executors
+      .newSingleThreadExecutor(); //пока в расположении один поток
+  private static ArrayList<Future> tasks = new ArrayList<>(); //можем запускать несколько запросов
 
-    private Scraper() {}
+  private Scraper() {
+  }
 
-    public static Scraper getInstance(){
-        return instance;
-    }
+  public static Scraper getInstance() {
+    return instance;
+  }
 
-    static void startScraping(){
-         tasks.add(es.submit(Scraper.getInstance()));
-    }
+  static void startScraping() {
+    tasks.add(es.submit(Scraper.getInstance()));
+  }
 
-    static void executorShoutdown(){
-        es.shutdown(); //закроется только после того как все будет завершено
-    };
+  static void executorShoutdown() {
+    es.shutdown(); //закроется только после того как все будет завершено
+  }
 
-
-
-    public void run() {
-        Thread.currentThread().setName("Scraper "+ Thread.currentThread().getId() );
-        System.out.println("Start! " + Thread.currentThread().getName() );
-
-        //get data from GUI
-        QueryOption queryOption = new FlatQO();
-        queryOption.getDataFields();
-        //start parsing
-        Parse<QueryOption> olx = new SiteOlx("https://www.olx.ua/");
-        olx.start(queryOption);
-        // get and export data to Excel
+  ;
 
 
-        System.out.println("End! " + Thread.currentThread().getName() );
-    }
+  public void run() {
+    Thread.currentThread().setName("Scraper " + Thread.currentThread().getId());
+    System.out.println("Start! " + Thread.currentThread().getName());
+
+    //get data from GUI
+    QueryOption queryOption = new FlatQO();
+    queryOption.getDataFields();
+    //start parsing
+    Parse<QueryOption> olx = new SiteOlx("https://www.olx.ua/");
+    olx.start(queryOption);
+    // get and export data to Excel
+
+    System.out.println("End! " + Thread.currentThread().getName());
+  }
 }

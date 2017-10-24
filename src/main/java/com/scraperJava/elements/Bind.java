@@ -10,5 +10,6 @@ import java.lang.annotation.*;
 @Inherited
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Bind {
-       String value();
+
+  String value();
 }

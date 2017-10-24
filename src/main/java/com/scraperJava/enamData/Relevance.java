@@ -11,26 +11,26 @@ import java.util.Locale;
  */
 
 public enum Relevance {
-    TODAY,
-    YESTERDAY,
-    THREEDAYS,
-    WEEK;
+  TODAY,
+  YESTERDAY,
+  THREEDAYS,
+  WEEK;
 
 
-    String localDate;
-    Relevance() {
-        ZoneId zoneId = ZoneId.of("Europe/Kiev");
-        LocalDate nowDate = LocalDate.now(zoneId);
-        DateTimeFormatter dtFormat = DateTimeFormatter.ofPattern("dd MMMM yyyy");
+  String localDate;
 
-        localDate = nowDate.minusDays(this.ordinal()).format(dtFormat).toLowerCase();
-    }
+  Relevance() {
+    ZoneId zoneId = ZoneId.of("Europe/Kiev");
+    LocalDate nowDate = LocalDate.now(zoneId);
+    DateTimeFormatter dtFormat = DateTimeFormatter.ofPattern("dd MMMM yyyy");
+
+    localDate = nowDate.minusDays(this.ordinal()).format(dtFormat).toLowerCase();
+  }
 
 
-    @Override
-    public String toString() {
-        return localDate;
-    }
-
+  @Override
+  public String toString() {
+    return localDate;
+  }
 
 }
